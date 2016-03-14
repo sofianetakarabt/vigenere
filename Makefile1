@@ -1,0 +1,22 @@
+CC=gcc 
+FLAGS=-lgmp
+
+all:main_pgcd main_pgcd_gmp clean
+
+%.o:%.c
+	$(CC) -c $<
+
+main_pgcd:pgcd.o main_pgcd.o head.h
+	$(CC) -o $@ $^
+
+main_pgcd_gmp:main_pgcd_gmp.c pgcd_gmp.c
+	$(CC) -o $@ $^ $(FLAGS)
+
+main_expomod:main_expomod.c expomod.c head.h
+	$(CC) -o $@ $^ $(FLAGS)
+
+main_primitive:main_primitive.c primitive.c expomod.c head.h
+	$(CC) -o $@ $^ $(FLAGS)
+
+clean:
+	rm -f *.o

@@ -1,0 +1,19 @@
+void decry(char permute [TAILLE],char *file,float tab_freq_lang [TAILLE]){
+
+	float freq[TAILLE];
+	frequence(file,freq);
+int i,j,ind;
+float min1=1,min2=1;
+	for(i=0;i<TAILLE;i++){ // etirer dans tab_freq_lang
+		for(j=0;j<TAILLE;j++){ // chercher la frequence correspondante dans freq
+			min2 = tab_freq_lang[i]-freq[j];
+			if(min2 < min1) {
+					min1 = min2;
+					ind = j;	
+						}
+		//printf("la frequance de %c est proche de celle de %c\n",tab_freq_lang[i],freq[ind]);
+		permute[i]=j+'a';
+		}
+	}
+}
+

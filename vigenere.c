@@ -40,18 +40,13 @@ return t;
 }
 /*
 int main(int arg,char **args){
-
 char txt[] ="vousavezdejaquelquespoints";
 char key[] ="cesar";
 char key1[] ="CESAR";
-
 char *c = vigenere(txt,key);
-
 printf("texte chiffré :\n%s\n",c);
-
 char *txt1 =dechiffre_veg(c,key1);
 printf("texte dechiffré :\n%s\n",txt1);
 }
 */
 //XSMSRXIRDVLEIUVNUMEJRSANKU
-
