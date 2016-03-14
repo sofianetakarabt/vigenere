@@ -8,7 +8,7 @@ all : decryp_mono mono_alph key_vig cesar1 vigenere1 decryp_rap
 %.o:%.c
 	$(CC) -c $<
 
-fonctions.o: fonctions.c
+fonctions.o: fonctions.%
 	$(CC) -c $<
 
 
